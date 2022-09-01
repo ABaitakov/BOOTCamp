@@ -1,0 +1,26 @@
+.https://www.justinmind.com/blog/button-design-websites-mobile-apps/
+Style
+1) color - (html colors table)(color picker)
+2) background-color 
+3) ВАЖНО margin/margin-top/margin-right/margin-bottom/margin-left
+4) ВАЖНО padding/padding-top/padding-right/padding-bottom/padding-left
+5) text-decoration
+6) font-size 
+7) font-family (windows mac os fonts - https://habr.com/ru/post/68189/)
+8) font-weight (bold)(300 600 900) 
+9) border-radius: 5px/50%
+10) border: 2px darkgrey solid/dotted/groove;
+
+
+<div>
+11) height, width - использовали для рисунков, теперь к блокам
+12) Mac OS - tools - command palette - install package - emmet
+  Windows - 
+13) min-height, min-width
+14) max-height, max-width
+15) display: flex - используем для div-a чтобы его элементы стали блочными
+16) align-items: center - используем для div-a чтобы его элементы встали по центру по вертикали(Важно чтоб элементы div-a были блочными, для этого выполняем пункт 15)
+17) justify-content: center - используем для div-a чтобы его элементы встали по центру по горизонтали(Важно чтоб элементы div-a были блочными, для этого выполняем пункт 15)
+18) text-align: center - используем для заголовков, абзацев
+19) www.picsum.photos
+20)

@@ -1,0 +1,29 @@
+
+
+Тэги и атрибуты
+1) <html>
+2) <head>
+3) <title>
+4) <body>
+5) <h1> - <h6>
+6) <a> - href
+7) <br>
+8) <img> - src, width, height
+9) <input> - type, name
+	9 - 1) type = "text" - placeholder, value, readonly, disabled
+	9 - 2) type = "password"
+	9 - 3) type = "number"
+	9 - 4) type = "date"
+	9 - 5) type = "radio" - checked
+	9 - 6) type = "checkbox"
+	9 - 7) type = "button" - value, title
+	9 - 8) type = "file"
+10) <select>
+	11) <option> - selected 
+11) <textarea> - rows, cols
+12) <table> - border, cellpadding
+	13) <thead>
+	14) <tbody>
+	15) <th>
+	16) <tr>
+	17) <td> - colspan, rowspan
