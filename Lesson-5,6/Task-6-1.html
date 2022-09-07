@@ -6,77 +6,117 @@
 <body>
 	<script type="text/javascript">
 
-		ex1();
+		var num_ex = parseInt(prompt("Введите номер упражнения:"));
+
+		var result = eval("ex"+num_ex+"()");
+		console.log(result);
 
 
 		function ex1() {
 			var n = parseInt(prompt("Enter number:"));
 			var i = 0;
 			var arr = new Array();
-			while (i>n) {
-				n = prompt("Enter number:");
-				arr.push(n);
+			while (i<n) {
+				var m = prompt("Enter number:");
+				arr.push(m);
 				i++;
 			}
 
-			for (var i = n; i>n-1; i--){
-				alert(arr[i]);
+			var arr2 = new Array();
+			for (var i = arr.length; i >= 0; i--){
+				arr2.push(i);
 			}
+			return console.log(arr2);
 		}
 
 		function ex2() {
 			var n = parseInt(prompt("Enter number:"));
 			var i = 0;
 			var arr = new Array();
-			while (i>n) {
-				n = prompt("Enter number:");
-				arr.push(n);
+			while (i<n) {
+				var m = prompt("Enter number:");
+				arr.push(m);
 				i++;
 			}
 			var max = arr[-1];
-			for (var i = 0; i < n; i++) {
+			for (var i = 0; i < arr.length; i++) {
 				if(max < arr[i]) max = arr[i];
 			}
-			console.log(max);
+			return console.log(max);
 		}
 
 		function ex3() {
 			var n = parseInt(prompt("Enter number:"));
 			var i = 0;
 			var arr = new Array();
-			while (i>n) {
-				n = prompt("Enter number:");
-				arr.push(n);
+			while (i<n) {
+				var m = prompt("Enter number:");
+				arr.push(m);
 				i++;
 			}	
 
 			var sum = 0;
 			var count = 1;
-			for (var i = 0; i < n; i++) {
+			for (var i = 0; i < arr.length; i++) {
 				sum +=arr[i];
 				count++;
 			}
-			console.log(sum); console.log(sum/count);	
+			return console.log(sum); return console.log(sum/count);	
 		}
 
 		function ex4() {
 			var n = parseInt(prompt("Enter number:"));
 			var i = 0;
 			var arr = new Array();
-			while (i>n) {
-				n = prompt("Enter number:");
-				arr.push(n);
+			while (i<n) {
+				var m = prompt("Enter number:");
+				arr.push(m);
 				i++;
 			}
 
 			var sq = 0;
 			for (var i = 0; i < n; i++) {
 				sq = arr[i]*arr[i];
-				console.log(arr[i]);
+				return console.log(arr[i]);
 			}		
 		}
 
-		
+		function ex5() {
+			users = [
+				{"login":"ilyas", "password": "qwerty"},
+				{"login":"eldar", "password": "qqqqq"},
+				{"login":"assylkhan", "password": "qweqwe"},
+				{"login":"anel", "password": "asdasd"},
+				{"login":"alibek", "password": "aaaaaa"}
+				];
+
+			var login = prompt("Enter login: ");
+			var password = prompt("Insert password: ");	
+			var text = "";
+			for(var i=0;i<users.length;i++)	{
+				if (login === users[i]["login"] && password === users[i]["password"]) text = "Welcome, you are authenticated!";
+				else text = "User not found";
+			}
+			return console.log(text);
+		}
+
+		function ex6() {
+			books = [ 
+				{"book":"Harry Potter and the Philosopher's Stone", "author":"Joanne Rowling", "ISBN":"1233123", "price":"50$"},
+				{"book":"Harry Potter and the Chamber of Secrets", "author":"Joanne Rowling", "ISBN":"222332", "price":"40$"},
+				{"book":"Harry Potter and the Prisoner of Azkaban", "author":"Joanne Rowling", "ISBN":"452323", "price":"55$"},
+				{"book":"Harry Potter and the Orden of Phoenix", "author":"Joanne Rowling", "ISBN":"335225", "price":"60$"},
+			]
+
+			var author = prompt("Enter author: ");
+
+			for(var i=0;i<books.length;i++)	{
+				if (author === books[i]["author"]) { 
+					 console.log(books[i]["book"]+" - "+books[i]["author"]+" - "+books[i]["ISBN"]+" - "+books[i]["price"]);
+				} 
+			}
+			
+		}	
 	</script>
 </body>
 </html>
