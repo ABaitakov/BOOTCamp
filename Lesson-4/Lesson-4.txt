@@ -1,0 +1,39 @@
+Display:flex;
+
+https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+
+1) small:nth-child(n) - придание стиля к n-ному элементу класса. Нет необходимости придумывать название класса для внутреннего элемента. Можно просто указать его порядковый номер
+
+2)  flex-direction - раставляет элементы в ряд или колонку
+  2-1) row
+  2-2) row-reverse
+  2-3) column
+  2-4) column-reverse
+3) flex-wrap - перенос на следующую строку
+  3-1) nowrap
+  3-2) wrap
+  3-3) wrap-reverse
+4) flex-flow - предыдущие два параметра сгруппированные
+  Пример: column wrap
+5) justify-content - выравнивание по горизонтали
+  5-1) flex-start <- используйте это
+  5-2) flex-end <- используйте это
+  5-3) center
+  5-4) start
+  5-5) end
+  5-6) left
+  5-7) right
+  5-8) spacebetween
+  5-9) spacearound
+  5-10) spaceevenly
+6) align-items - выравнивание по вертикали
+  6-1) flex-start
+  6-2) flex-end
+  6-3) center
+  6-4) baseline
+7) align-content - работает только с wrap
+  7-1) flex-start
+  7-2) flex-end
+  7-3) center
+  7-4) space-between
+  7-5) space-around

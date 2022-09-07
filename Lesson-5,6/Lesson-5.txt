@@ -1,0 +1,17 @@
+Введение в JavaScript:
+1) Создание переменных ключевыми словами let и const
+  - var нынче не используется. Узнать почему так, можете здесь: https://learn.javascript.ru/var 
+2) Типы переменных:
+  let a = 10 // целые числа
+  let b = 5.5 // дробные числа
+  let c = "Hello"/'Hello' // строки
+  let e = true // булев
+3) Основные функции
+  3-1) alert()
+  3-2) console.log()
+  3-3) prompt()
+  3-4) parseInt()
+  3-5) parseFloat()
+4) Операторы if, else
+5) Операторы while, for
+6) Создание новой функции

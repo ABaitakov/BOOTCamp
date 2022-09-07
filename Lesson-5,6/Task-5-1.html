@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tasks</title>
+</head>
+<body>
+	<script type="text/javascript">
+			
+		var num_ex = parseInt(prompt("Введите номер упражнения:"));
+
+		var result = eval("ex"+num_ex+"()");
+		console.log(result);
+		
+
+		function ex1() {
+			var x = parseInt(prompt("Enter number:"));
+			return console.log((x*x)+(2*x-1));
+		}
+
+		function ex2()	{
+			var a = parseInt(prompt("Enter number:"));
+			var b = parseInt(prompt("Enter number:"));
+			if (a%b==0) return console.log("Divisible");
+			else return console.log("Not Divisible");
+		}
+
+		function ex3() {
+			var a = prompt("Enter name:");
+			var b = prompt("Enter surname:");
+			var c = prompt("Enter city:");
+			var d = prompt("Enter age:");
+
+			return console.log("Name: a");
+			return console.log("Surname: b");
+			return console.log("City: c");
+			return console.log("Age: d");
+		}
+		
+		function ex4() {
+			var a = parseInt(prompt("Enter number:"));
+			var b = parseInt(prompt("Enter number:"));
+			var c = parseInt(prompt("Enter number:"));
+
+			return console.log(a+b+c);
+			return console.log(a-b-c);
+			return console.log(a*b*c);
+		}
+
+		function ex5() {
+				var n = parseInt(prompt("Введите количество школьников:"));
+				var k = parseInt(prompt("Введите количество яблок:"));
+
+				c = k%n;
+
+				return console.log(c);
+			}	
+
+		function ex6() {
+				var a = parseInt(prompt("Введите длину стороны:"));
+				var b = parseInt(prompt("Введите длину стороны:"));
+					c = (a*a)+(b*b);
+				return console.log(Math.sqrt(c));
+			}	
+
+		function ex7() {
+				var a = parseInt(prompt("Введите среднюю скорость:"));
+				var b = parseInt(prompt("Введите дистанцию:"));
+
+					if (b/a < 2.15) return console.log("YES, YOU CAN REACH");
+					else return console.log("NO, YOU CAN NOT REACH");
+			}
+
+		function ex8() {
+				var price = 120;
+				var amount = parseInt(prompt("Введите количество:"))
+
+				if (price*amount >= 4000) {
+					var discount = (price*amount)*0.1;
+					var sum = (price*amount)-discount;
+					return console.log(sum);
+				}else return console.log(price*amount);
+		}
+
+		function ex9() {
+				var kzt = parseInt(prompt("INSERT YOUR AMOUNT IN KZT:"));
+				var cash = prompt("1-TO USD, 2-TO EUR, 3-TO GBP");
+
+				if (cash == 1) {
+					var total = kzt*380;
+				}else if (cash == 2) {
+					total = kzt*430;
+				}else if (cash == 3) {
+					total = kzt*480;
+				}
+				return console.log(total);
+		}
+
+		function ex10() {
+			 	var login = prompt("Insert your login:");
+			 	var password = prompt("Insert password:");
+
+			 	login.toLowerCase();
+			 	password.toLowerCase();
+
+			 	if (login === "user" && password === "qwerty") return console.log("Authentication completed");
+			 	else return console.log("Invalid login or password");
+		}	 
+
+		function ex11() {
+			var year = parseInt(prompt("Insert year:"));
+
+			if (year%4==0 || year%400==0 && year%100!=0) 
+				console.log("YES!");
+			else console.log("NO!")
+		}
+
+		function ex12() {
+			var score = parseInt(prompt("Insert score:"));
+
+			if (score>=90) return console.log("A");
+			else if (score>=75) return console.log("B");
+			else if (score>=60) return console.log("C");
+			else if (score>=50) return console.log("D");
+			else return console.log("F");
+		}
+
+		function ex13() {
+			var n = parseInt(prompt("1 - Science, 2 - Humanitarian subjects, 3 - Art, 4 - Sport"));
+			
+			if (n == 1) {
+				var m = prompt("1 - Math, 2 - Physics");
+				if (m == 1) return console.log("You are Financier");
+				else return console.log("You are Engineer");
+			}else if (n == 2) {
+				m = prompt("1 - History, 2 - Foreign Languages");
+				if (m == 1) return console.log("You are Historic or Diplomat");
+				else return console.log("You are Translator");
+			}else if (n == 3) {
+				m = prompt("1 - Drawing, 2 -Singing");
+				if (m == 1) return console.log("You are Painter or Architect");
+				else return console.log("You are Singer or Tamada");
+			}else if (n == 4) {
+				m = prompt("1 - Team, 2 - Individual");
+				if (m == 1) return console.log("You are footballer or Basketball player");
+				else return console.log("You are boxer or tennis player");
+			}
+		}
+
+		function ex14() {
+			var a = parseInt(prompt("insert 1 side of triangle:"));
+			var b = parseInt(prompt("insert 2 side of triangle:"));
+			var c = parseInt(prompt("insert 3 side of triangle:"));
+
+			if (a+b>c && b+c>a && c+a>b) return console.log("YES");
+			else return console.log("NO");
+		}
+
+		function ex15() {
+			var kzt = parseInt(prompt("How murch kzt:"));
+
+			var  cash = kzt / 380;
+			var decimals = cash - Math.floor(cash);
+			var cents = Math.trunc(decimals*100);
+
+			if (kzt%380==0) return console.log("ONLY "+cash+" USD");
+			else return console.log(Math.trunc(cash)+" USD and "+cents+" cents");
+
+		}
+
+		function ex16() {
+			var min = parseInt(prompt("How murch minutes:"));
+
+			var  hour = min / 60;
+			var decimals = hour - Math.floor(hour);
+			var minutes = Math.trunc(decimals*100);
+
+			if (hour%60==0) return console.log("ONLY "+hour+" HOURS");
+			else return console.log(Math.trunc(hour)+" HOURS and "+minutes+" MINUTES");
+		}
+	</script>
+</body>
+</html>

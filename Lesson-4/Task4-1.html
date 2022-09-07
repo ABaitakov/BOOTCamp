@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Вконтакте</title>
+	  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
+	<style>
+		a {
+			text-decoration: none;
+		}
+		body {margin: 0;}
+		.head {
+			display: flex;
+			background-color: white;
+			height: 70px;
+			justify-content: center;
+		}
+		.head-center {
+			width: 70%;
+			background-color: white;
+			display: flex;
+			align-items: center;
+		}
+		.logo {
+			width: 5%;
+		}
+		.name {
+			font-weight: bold;
+			font-family: font-family: Tahoma, Arial, Verdana;
+			font-size: 28px;
+			width: 15%;
+		}
+		.serch {
+			 border-radius: 5px; 
+			 background-color: #edeff2;
+			 border-color: #edeff2;
+			 border: 1px;
+			 height: 24px;
+			 width: 20%;
+		}
+		.username {
+			font-family: Tahoma, Arial, Verdana;
+			font-size: 24px;
+			margin-left: 240px;
+		}
+		.userimg img {
+			border-radius: 50%;
+			padding: 10px;
+		}
+		.main-body {
+			justify-content: center;
+			display: flex;
+			background-color: #edeff2;
+		}
+		.all-content {
+			background-color: #edeff2; 
+			display: flex;
+			width: 70%;
+		}
+		.menu {
+			font-family: font-family: Tahoma, Arial, Verdana;
+			width: 20%;
+		}
+		.menu a {
+			color: black;
+		}
+		 hr {
+			border: none;
+			background-color: #cdcfd1;
+			color: #cdcfd1;
+			height: 1px;
+		}
+		.second {
+			width: 20%;
+		}
+		.profile {
+			display: flex;
+			flex-direction: column;
+			margin-top: 10px;
+			border: 1px;
+			border-color: white;
+			border-radius: 5px;
+			background-color: white;
+			justify-content: center;
+			padding-top: 10px;
+		}
+		.profile img {
+			padding: 0px 10px;
+		}
+		.profile p {
+			color: #cdcfd1;
+			padding-left: 10px;
+		}
+		.edit input{
+			border-color: #cdcfd1;
+			background-color: #cdcfd1;
+			border-radius: 5px;
+			width: 90%;
+			height: 30px;
+			color: #848587;
+			margin: 10px;
+		}
+		.profile-opt {
+			color: #cdcfd1;
+		}
+		.contact {
+			border: 1px;
+			border-radius: 5px;
+			border-color: white;
+			background-color: white;
+			height: 40px;
+		}
+		.contact a {
+			color: black;
+			display: flex;
+			justify-content: center;
+			align-content: center;
+		}
+		.friends {
+			display: flex;
+			border: 1px;
+			border-radius: 5px;
+			border-color: white;
+			background-color: white;
+			margin-top: 10px;
+			padding: 10px;
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
+		.friends a {
+			color: black;
+
+		}
+		#gray {
+			color: #cdcfd1;
+		}
+		.friends-img img {
+			margin-top: 10px;
+			border-radius: 50%;
+			width: 40px;
+		}
+		.friends-img {
+			display: flex;
+			flex-wrap: wrap;
+		}
+		.avatar {
+			width: 33%;
+			font-size: 14px;
+		}
+		.friends-online {
+			display: flex;
+			flex-wrap: wrap;
+		}
+		.big {
+			width: 60%;
+		}
+		.third {
+			margin: 10px;
+			background-color: white;
+			border-radius: 5px;
+			height: 45%;
+			border-color: white; 	
+			padding: 10px;
+		}
+		.main {
+			display: flex;			
+		}
+		.main img {
+			border-radius: 50%;
+			border-color: #cdcfd1;
+			border: 1px;
+			margin-left: 5px;
+		}
+		.person-info {
+			display: flex;
+		}
+		.main-name {
+			display: flex;
+			width: 30%;
+			align-items: center;
+			flex-wrap: wrap;
+		}
+		.one {
+			justify-content: left;
+			color: #cdcfd1;
+			width: 50%;
+		}
+		.two {
+			justify-content: right;
+			color: midnightblue;
+			width: 50%;
+		}
+		.more-info {
+			display: flex;
+			margin-left: 312px;
+		}
+		.sum-friends {
+			display: flex;	
+			justify-content: space-between;
+			
+		} 
+		.sum {
+			width: 20%;
+			justify-items: center;
+			align-items: center;	
+		}
+		.sum a {
+			color: midnightblue;
+			font-size: 36px;
+			margin 5px;
+		}
+		.sum p {
+			color: black;
+			font-size: 14px;
+			margin: 0px;
+		}
+		.four {
+			margin: 10px;
+			background-color: white;
+			border-radius: 5px;
+			height: 18%;
+			border-color: white; 	
+			padding: 10px;
+		}
+		.text {
+			color: black;
+			display: flex;
+			justify-content: space-between;
+		}
+		span {
+			margin-left: 10px;
+		}
+		.photos img {
+			width: 23%;
+			margin: 4px;
+		}
+		.five {
+			margin: 10px;
+			background-color: white;
+			border-radius: 5px;
+			height: 5%;
+			border-color: white; 	
+			padding: 10px;
+			align-content: center;
+		}
+		.six {
+			margin: 10px;
+			background-color: white;
+			border-radius: 5px;
+			height: 15%;
+			border-color: white; 	
+			padding: 10px;
+			display: flex;
+		}
+		.six a {
+			color: black;
+			margin: 20px;
+		}
+	</style>
+</head>
+<body>
+	<div class="head">
+		<div class="head-center">
+			<div class="logo">
+				<img src="https://ra.by/uploads/monthly_2022_03/VK_logo_Blue_2048x2048.png.0d0867d329839f25fef0f4154a6a8337.png" width="40px">
+			</div>
+			<div class="name">
+				<p>вконтакте</p>
+			</div>
+			<div class="serch">
+				<input type="text" name="" placeholder="Поиск">
+			</div>
+			<div class="username">
+				<p style="margin-left: 300px;">Ilyas</p>
+			</div>
+			<div class="userimg">
+				<img src="https://klike.net/uploads/posts/2022-06/1656570769_1.jpg" width="40px">
+			</div>
+		</div>	
+	</div>
+	<div class="main-body">
+		<div class="all-content">
+			<div class="menu">
+				<p><a href="#">Моя страница</a></p>
+				<p><a href="#">Новости</a></p>
+				<p><a href="#">Мессенджер</a></p>
+				<p><a href="#">Друзья</a></p>
+				<p><a href="#">Сообщества</a></p>
+				<p><a href="#">Фотографии</a></p>
+				<p><a href="#">Музыка</a></p>
+				<p><a href="#">Видео</a></p>
+				<p><a href="#">Клипы</a></p>
+				<p><a href="#">Игры</a></p>
+				<hr>
+				<p><a href="#">Мини приложения</a></p>
+				<p><a href="#">VK Pay</a></p>
+				<hr>
+				<p><a href="#">Маркет</a></p>
+				<p><a href="#">Закладки</a></p>
+				<p><a href="#">Файлы</a></p>
+				<p><a href="#">Управление</a></p>
+				<hr>
+				<p><a href="#">Java EE Group</a></p>
+			</div>
+		<div class="second">
+			<div class="profile">
+				<img src="https://klike.net/uploads/posts/2022-06/1656570769_1.jpg" width="90%">
+				<div class="edit">
+					<input type="button" name="" value="Редактировать">
+				</div>
+				<div class="profile-opt">
+					<p>Статистика 	страницы</p>
+					<p>Воспоминания</p>
+					<p>Денежные переводы</p>
+				</div>	
+			</div>
+			<div class="contact">
+				<p><a href="#">Укажите ваши контакты</a></p>
+			</div>
+			<div class="friends">
+				<div>
+					<a href="#">Друзья</a>
+					<a href="#" id="gray">1484</a>
+				</div>
+				<div>	
+					<a href="#" id="gray">обновления</a>
+				</div>	
+				<div class="friends-img">
+					<div class="avatar">
+						<img src="https://klike.net/uploads/posts/2022-06/1656570756_3.jpg">
+						<a href="#">David</a>
+					</div>
+					<div class="avatar">	
+						<img src="https://klike.net/uploads/posts/2022-06/1656570793_13.jpg">
+						<a href="#">Bernard</a>
+					</div>
+					<div class="avatar">	
+						<img src="https://klike.net/uploads/posts/2022-06/1656570758_21.jpg">
+						<a href="#">Diego</a>
+					</div>
+					<div class="avatar">	
+						<img src="https://klike.net/uploads/posts/2022-06/1656570795_34.jpg">
+						<a href="#">Roberto</a>
+					</div>
+					<div class="avatar">	
+						<img src="https://klike.net/uploads/posts/2022-06/1656570756_44.jpg">
+						<a href="#">Grigorio</a>
+					</div>
+					<div class="avatar">	
+						<img src="https://klike.net/uploads/posts/2022-06/1656570749_46.jpg">
+						<a href="#">Salamon</a>
+					</div>	
+				</div>
+				<hr>
+				<div class="friends-online">
+					<div class="friends-aaa">
+						<a href="#">Друзья онлайн</a>
+						<a href="#" id="gray">42</a>
+					</div>	
+					<div class="friends-img">
+						<div class="avatar">
+							<img src="https://klike.net/uploads/posts/2022-06/1656570788_48.jpg">
+							<a href="#">Donald</a>
+						</div>
+						<div class="avatar">
+							<img src="https://klike.net/uploads/posts/2022-06/1656570756_44.jpg">
+							<a href="#">Lionel</a>
+						</div>
+						<div class="avatar">
+							<img src="https://klike.net/uploads/posts/2022-06/1656570809_42.jpg">
+							<a href="#">Roberto</a>
+						</div>
+					</div>
+				</div>	
+			</div>
+		</div>
+		<div class="big">
+			<div class="third">
+					<div class="main">
+						<div class="main-name">
+							<h3 style="margin: 5px;">Ilyas Zhuanyshev</h3>
+							<img src="https://www.vedi-express.com/34417-thickbox_default/italy-flag.jpg" width="20px";>
+							<div>
+								<p style="margin: 3px">www.bitlab.kz</p>
+							</div>	
+						</div>
+					</div>
+					<hr>
+					<div class="person-info">
+						<div class="one">
+							<p style="margin: 10px">День рождения:</p>
+							<p style="margin: 10px">Город:</p>
+							<p style="margin: 10px">Семейное положение:</p>
+							<p style="margin: 10px">Место работы:</p>
+							<p style="margin: 10px">Сайт</p>
+						</div>
+						<div class="two">
+							<p style="margin: 10px">26 мая 1989г.</p>
+							<p style="margin: 10px">Алматы</p>
+							<p style="margin: 10px">женат</p>
+							<p style="margin: 10px">BITLAB Academy</p>
+							<p style="margin: 10px">http://www.zhuanyshev.kz</p>
+						</div>
+					</div>
+					<div class="more-info">
+							<a href="#">Показать подробную информацию</a>
+					</div>	
+					<hr>
+					<div class="sum-friends">
+						<div class="sum">
+							<a href="#">1484</a>
+							<p>друга</p>
+						</div>
+						<div class="sum">
+							<a href="#">271</a>
+							<p>подписчик</p>
+						</div>
+						<div class="sum">
+							<a href="#">97</a>
+							<p>фотографий</p>
+						</div>
+						<div class="sum">
+							<a href="#">1380</a>
+							<p>видеозаписей</p>
+						</div>
+						<div class="sum">
+							<a href="#">6</a>
+							<p>подарков</p>
+						</div>
+					</div>
+				</div>
+			<div class="four">
+				<div class="text">
+					<a href="#">Мои фотографии<span id="gray">97</span></a>
+					<a href="#" id="gray">показать на карте</a>
+				</div>
+				<div class="photos">
+					<img src="https://klike.net/uploads/posts/2022-06/1656570757_11.jpg">
+					<img src="https://klike.net/uploads/posts/2022-06/1656570788_48.jpg">
+					<img src="https://klike.net/uploads/posts/2022-06/1656570747_18.jpg">
+					<img src="https://klike.net/uploads/posts/2022-06/1656570770_33.jpg">
+				</div>
+			</div>
+			<div class="five">
+			<p>Что нового у Вас?</p>
+		</div>
+		<div class="six">
+			<div>
+				<a href="#">Все записи</a>
+				<a href="#">Мои записи</a>
+				<a href="#">Архив записей</a>
+				<hr>
+			</div>
+		</div>	
+		</div>
+		</div>
+	</div>
+</body>
+</html>

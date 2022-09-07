@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Task6</title>
+</head>
+<body>
+	<script type="text/javascript">
+
+		ex1();
+
+
+		function ex1() {
+			var n = parseInt(prompt("Enter number:"));
+			var i = 0;
+			var arr = new Array();
+			while (i>n) {
+				n = prompt("Enter number:");
+				arr.push(n);
+				i++;
+			}
+
+			for (var i = n; i>n-1; i--){
+				alert(arr[i]);
+			}
+		}
+
+		function ex2() {
+			var n = parseInt(prompt("Enter number:"));
+			var i = 0;
+			var arr = new Array();
+			while (i>n) {
+				n = prompt("Enter number:");
+				arr.push(n);
+				i++;
+			}
+			var max = arr[-1];
+			for (var i = 0; i < n; i++) {
+				if(max < arr[i]) max = arr[i];
+			}
+			console.log(max);
+		}
+
+		function ex3() {
+			var n = parseInt(prompt("Enter number:"));
+			var i = 0;
+			var arr = new Array();
+			while (i>n) {
+				n = prompt("Enter number:");
+				arr.push(n);
+				i++;
+			}	
+
+			var sum = 0;
+			var count = 1;
+			for (var i = 0; i < n; i++) {
+				sum +=arr[i];
+				count++;
+			}
+			console.log(sum); console.log(sum/count);	
+		}
+
+		function ex4() {
+			var n = parseInt(prompt("Enter number:"));
+			var i = 0;
+			var arr = new Array();
+			while (i>n) {
+				n = prompt("Enter number:");
+				arr.push(n);
+				i++;
+			}
+
+			var sq = 0;
+			for (var i = 0; i < n; i++) {
+				sq = arr[i]*arr[i];
+				console.log(arr[i]);
+			}		
+		}
+
+		
+	</script>
+</body>
+</html>
