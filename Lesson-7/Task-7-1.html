@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Task-7</title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+		var num_ex = parseInt(prompt("Введите номер упражнения:"));
+
+		var result = eval("ex"+num_ex+"()");
+		console.log(result);
+
+		function ex1() {
+			let n = parseInt(prompt("Enter number: "));
+
+			let i = 0;
+			let arr = [];
+
+			while(i<n) {
+				let m = parseInt(prompt("Enter number: "));
+				arr.push(m);
+				i++;
+			}
+			let g = parseInt(prompt("Enter number: "));
+			alert("index of: "+g+" is "+arr.indexOf(g));
+		}
+
+		function ex2() {
+			let arr = [];
+			let isOn = true;
+			while(isOn) {
+				let n = parseInt(prompt("Enter number: "));
+				if (n == 0) isOn = false;	
+				else arr.push(n);
+			}
+
+			let gm = 1;
+			for (let i = 0; i < arr.length; i++) {
+				gm = gm*arr[i];
+			}
+
+			gm = Math.pow(gm, 1 / arr.length);
+			alert(gm.toFixed(3));
+		}
+
+		function ex3() {
+			let arr = [];
+			let isOn = true;
+			while(isOn) {
+				let n = parseInt(prompt("Enter number: "));
+				if (n == 0) isOn = false;	
+				else arr.push(n);
+			}
+
+			let result = arr.filter(item => item > 0);
+			alert(result);
+		}
+
+		function ex4() {
+			let n = parseInt(prompt("Enter number: "));
+			let arr = [];
+			let i = 0;
+
+			while (i<n) {
+				let m = parseInt(prompt("Enter number: "));
+				arr[i] = m;
+				i++;
+			}
+			let result = 1;
+			for (let i = 0; i < arr.length; i++) {
+				if (arr[i]!=0) result *=arr[i]; 
+			}
+
+			alert(result);
+		}
+
+		function ex5() {
+			cars = [
+				{"name":"Toyota", "price": 12000000, "year": 2015, "volume": 2.2},
+				{"name":"Mercedes", "price": 70000000, "year": 2018, "volume": 3.8},
+				{"name":"Toyota", "price": 7000000, "year": 2013, "volume": 2.0},
+				{"name":"BMW", "price": 11000000, "year": 2011, "volume": 3.0},
+				{"name":"Lexus", "price": 60000000, "year": 2017 ,"volume": 5.7},
+				{"name":"Tesla", "price": 60000000, "year": 2021 ,"volume": "5.0"},
+				{"name":"Chery", "price": 15000000, "year": 2022,"volume": 1.5}
+			];
+
+			let isOn = true;
+			while (isOn) {
+
+				let menu = parseInt(prompt("INSERT [1] TO SEARCH BY NAME\n INSERT [2] TO SEARCH BY YEAR\n INSERT [3] TO SEARCH BY ENGINE VOLUME\n INSERT [4] TO SEARCH BY PRICE\n INSERT [5] TO EXIT"));
+
+				if (menu==1) {
+					let subMenu = prompt("INSERT NAME OF CAR:");
+					var text = "";
+					for (let i = 0; i < cars.length; i++) {
+						if (subMenu == cars[i]["name"]) {
+							text+=cars[i]["name"]+" - "+cars[i]["price"]+" - "+cars[i]["year"]+" - "+cars[i]["volume"]+" liters\n";
+						} 
+					}
+					alert(text);
+				}else if (menu==2) {
+					var text = "";
+					let subMenu = parseInt(prompt("INSERT YEAR START FROM: "));
+					let subMenu2 = parseInt(prompt("INSERT YEAR ENDS FROM: "));
+					for (let i = 0; i < cars.length; i++) {
+						if (cars[i]["year"]>=subMenu && cars[i]["year"]<=subMenu2) {
+							text+=cars[i]["name"]+" - "+cars[i]["price"]+" - "+cars[i]["year"]+" - "+cars[i]["volume"]+" liters\n";
+						}
+					}
+					alert(text);
+				}else if (menu==3) {
+					var text = "";
+					let subMenu = parseFloat(prompt("INSERT ENGINE VOLUME START FROM: "));
+					let subMenu2 = parseFloat(prompt("INSERT ENGINE VOLUME ENDS FROM: "));
+					for (let i = 0; i < cars.length; i++) {
+						if (cars[i]["volume"]>=subMenu && cars[i]["volume"]<=subMenu2) {
+							text+=cars[i]["name"]+" - "+cars[i]["price"]+" - "+cars[i]["year"]+" - "+cars[i]["volume"]+" liters\n";
+						}
+					}
+					alert(text);
+				}else if (menu==4) {
+					var text = "";
+					let subMenu = parseInt(prompt("INSERT PRICE START FROM: "));
+					let subMenu2 = parseInt(prompt("INSERT PRICE ENDS FROM: "));
+					for (let i = 0; i < cars.length; i++) {
+						if (cars[i]["price"]>=subMenu && cars[i]["price"]<=subMenu2) {
+							text+=cars[i]["name"]+" - "+cars[i]["price"]+" - "+cars[i]["year"]+" - "+cars[i]["volume"]+" liters\n";
+						}
+					}
+					alert(text);
+				}else if (menu==5 || menu==0)	{
+					isOn = false;
+				}
+			}	
+		}
+
+			function ex6() {
+				var sudent ={};
+				var sudents = [];
+				let isOn = true;
+				while (isOn) {
+					n = parseInt(prompt("PRESS 1 TO ADD STUDENT \n PRESS 2 TO LIST STUDENT \n PRESS 0 TO EXIT"));
+					if (n == 1) {
+						let name = prompt(" INSERT NAME:");
+						let surname = prompt("INSERT SURNAME:");
+						let gpa = parseFloat(prompt("INSERT GPA:"));
+
+							sudent.name = name;
+							sudent.surname = surname;
+							sudent.gpa = gpa;
+
+						sudents.push(sudent);	
+					}else if (n == 2) {
+						var text = "";
+						for (let i = 0; i < sudents.length; i++) {
+							text += sudents[i]["name"]+" "+sudents[i]["surname"]+" "+sudents[i]["gpa \n"]; 
+						}
+						alert(text);
+					}else if (n == 0) isOn = false;
+				}
+			}	
+	</script>
+</body>
+</html>
