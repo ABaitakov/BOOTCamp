@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Task8-6</title>
+	<style type="text/css">
+		#body {
+			background-color: #d0d6d5;
+		}
+		.error {height: 20px; color: red;}
+		form {text-align: left; 
+			  margin-top: 50px;
+			  margin: 50px;
+		}
+		#myform input {
+			width: 50%;
+		}
+		.all {
+			display: flex;
+			justify-content: center;
+		}
+		.form {
+			width: 50%;
+			margin: 150px;
+			background-color: white;
+			border: 5px solid #d0d6d5;
+			outline: 5px solid white;
+			border-radius: 5px;
+		}
+	</style>
+</head>
+<body id="body">
+	<div class="all">
+		<div class="form">
+			<form id="myform">
+				Email:<br>
+				<input oninput="checkEmail()" type="text" name="email" id="emailInput">
+				<div id="emailError" class="error"></div>
+				Password:<br>
+				<input oninput="checkPass()" type="password" name="password" id="passInput">
+				<div id="passwordError" class="error"></div>
+				Retype Password:<br>
+				<input oninput="checkRepass()" type="password" name="repassword" id="repassInput">
+				<div id="repasswordError" class="error"></div>
+				<button type="button" onclick="checkUser()">REGISTER</button>
+			</form>
+		</div>
+	</div>
+	<script type="text/javascript">
+
+		let usersArray = [ "Ilyas@bitlab.kz",
+						   "Aibek@bitlab.kz",
+						   "Eldar@bitlab.kz"];
+
+		function checkUser() {
+			if (!emailInput.value.includes("@")) emailError.innerText="Please, enter rigth email";
+			else {
+				emailError.innerText="";
+				let newEmail = emailInput.value;
+			    usersArray.push(newEmail);
+			    console.log(usersArray);
+				return alert("Registration complete sucsessfully");
+			}
+		}
+
+		function checkEmail() {
+			console.log(emailInput.value)
+			isSucsess = false;
+			for (let u of usersArray) {
+				if (emailInput.value == u)
+					isSucsess = true;
+			}
+			console.log(isSucsess)
+			if (isSucsess) {
+				emailError.innerText = "Curent email adress is alredy in use"
+			}else 
+				emailError.innerText = "";
+		}
+
+		function checkPass() {
+			if (passInput.value.length < 6 && passInput.value.length != 0)
+          		passwordError.innerText = "Password length at least must be 6 symbols";
+        	else passwordError.innerText = "";
+		}
+
+		function checkRepass() {
+			if (repassInput.value != passInput.value) 
+				repasswordError.innerText = "Passwords are not same";
+			else repasswordError.innerText = "";
+		}
+	</script>
+</body>
+</html>

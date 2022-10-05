@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Task9-1</title>
+	<style type="text/css">
+		.all {
+			display: flex;
+			justify-content: center;
+		}
+		.container {
+			margin: 100px;
+			width: 30%;
+			border: 5px solid #afb3b2;
+			border-radius: 5px;
+			outline: 3px solid white;
+			padding: 30px;
+			background-color: white;
+		}
+		.btn {
+			margin-top: 20px;
+			display: flex;
+			justify-content: space-evenly;
+		}
+		#name {
+			margin-left: 100px;
+		}
+		#surname {
+			margin-left: 69px;
+		}
+		#country {
+			margin-left: 73px;
+		}
+		#phone {
+			margin-left: 22px;
+		}
+	</style>
+</head>
+<body style="background-color: #d0d6d5;">
+	<div class="all">
+		<div class="container">
+			<form class="myform">
+				NAME:<input type="text" id="name"><br><br>
+				SURNAME:<input type="text"  id="surname"><br><br>
+				COUNTRY:<select id="country">
+						<option>Kazakhstan<selected></option>
+						<option>USA</option>
+						<option>Russia</option>
+						<option>China</option>
+						</select><br><br>
+				PHONE NUMBER:<input type="text"  id="phone"><br><br>
+				<div class="btn">
+					<button id="reg">REGISTER</button>
+					<button id="draft" onclick="saveObject()">SAVE TO DRAFT</button>
+				</div>	
+			</form>
+		</div>
+	</div>
+	<script type="text/javascript">
+		
+
+		function saveObject() {
+			let namex = name.value;
+			let surnamex = surname.value;
+			let countryx = country.value;
+			let phonex = phone.value;
+			console.log(namex+" "+surnamex+" "+countryx+" "+phonex);
+
+			let user = {name: name, surname:surname, country:country, phone:phone};
+			let jsonUser = JSON.strngify(user);
+			localstorage.jsonUser
+			console.log(jsonUser.value);
+
+		}
+	</script>
+</body>
+</html>

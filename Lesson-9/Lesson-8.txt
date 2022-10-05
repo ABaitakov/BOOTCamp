@@ -1,0 +1,5 @@
+Локальное хранилище
+1) localStorage.setItem([название ключа],[значение ключа])
+2) localStorage.getItem([название ключа])
+3)  JSON.stringify([объект]);
+4)  JSON.parse([объект]);

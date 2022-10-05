@@ -1,0 +1,17 @@
+Продолжение DOM
+1) .children 
+	1-1) getElementsByTagName()
+ 	1-2) getElementsByClassName()
+2) .parentElement
+3) .nextElementSibling
+4) .previousElementSibling
+5) .lastElementChild
+6) document.createElement()
+7) .appendChild()
+8) .remove()
+
+СЛУШАТЕЛЬ СОБЫТИИ
+9) addEventListener("dblclick",foo);
+10) function foo(event)
+	console.log(event) <- проверяем что в себе имеет event
+11) event.target <- достает элемент на котором сработало событие

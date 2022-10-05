@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Task8-4</title>
+	<style type="text/css">
+		.all {
+			display: flex;
+			justify-content: center;
+		}
+		.main {
+			width: 70%;
+			height: 80%;
+			border: 2px solid gray;
+			border-radius: 5px;
+		}
+		.image {
+			padding: 10px;
+			display: flex;
+			justify-content: center;
+		}
+		.buttons {
+			display: flex;
+			padding: 10px;
+			justify-content: center;
+		}
+		.buttons input {
+			margin: 20px;
+		}
+	</style>
+</head>
+<body>
+	<div class="all">
+		<div class="main">
+			<div class="image">
+				<img src="" width="95%" id="img">
+			</div>
+			<div class="buttons">
+				<input type="button" name="" value="< BACK" id="back" onclick="changeImgBack()">
+				<input type="button" name="" value="NEXT >" id="next" onclick="changeImgNext()">
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		let images = ["https://wallpaperaccess.com/full/24247.jpg",
+					  "https://wallpaperaccess.com/full/1223045.jpg",
+					  "https://wallpaperaccess.com/full/4706837.jpg",
+					  "https://wallpaperaccess.com/full/2987220.jpg",
+					  "https://wallpaperaccess.com/full/2097773.jpg"];
+
+		img.src = images[0];
+		let index = 0;
+
+		function changeImgNext() {
+			img.src = images[index++];
+			if (index == images.length-1) index = 0;
+			console.log(img.src);
+
+		}
+
+		function changeImgBack() {
+			img.src = images[index--];
+			if (index == 0) index = images.length-1;
+			console.log(img.src);
+		}
+	</script>
+</body>
+</html>

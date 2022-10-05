@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+	<title>Task8-1</title>
+	<style type="text/css">
+		.allContent {
+			display: flex;
+			justify-content: center;
+			padding-top: 50px;
+		}
+		.window {
+		border: 5px white solid;
+		border-radius: 5px;
+		background-color: #e6e5e3;
+		width: 40%;
+		height: 30%;
+		outline: 2px solid black;
+		}
+		.first {
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+			padding: 10px;
+		}
+		.first input {
+			height: 30%;
+			width: 40%;
+			margin-left: 33px;
+			border: 2px solid grey;
+			border-radius: 5px;
+		}
+		.second {
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+			padding: 10px;
+			border-bottom: 1px solid black ;
+		}
+		.second input {
+			height: 30%;
+			width: 40%;
+			border: 2px solid grey;
+			border-radius: 5px;
+		}
+		.btn {
+			display: flex;
+			justify-content: right;
+			padding: 15px 75px;
+			background-color: white;
+			border-color: white;
+		}
+		.btn input {
+			border-radius: 5px;
+			border: 2px solid white;
+			outline: 2px solid grey;
+			
+		}
+		#h2 {justify-content: center;
+			 display: flex;}
+	</style>
+</head>
+<body>
+	<div class="allContent">
+		<div class="window">
+			<div class="first">
+				<p>LOGIN:</p>
+				<input type="text" name="" id="log">
+				</div>
+			<div class="second">
+				<p>PASSWORD:</p>
+				<input type="text" name="" id="pass">
+			</div>
+			<div class="btn">
+				<div class="but">
+					<input type="button" name="" value="SIGN IN" id="btn" onclick="show()">
+				</div>	
+			</div>
+		</div>	
+	</div>
+	<script type="text/javascript">
+		let users = [{"login":"Ilyas", "password":"qwerty"},
+				 	{"login":"Aibek", "password":"qwerty123"},
+				 	{"login":"Almas", "password":"astana2022"}
+		
+				 	];
+		function show() {
+			let isGreat = auth(log.value, pass.value);
+			if (isGreat == true) {
+				document.body.innerHTML = '<h2 id="h2">You are authenticated</h2>'
+			}else {
+				log.style.border = "2px solid red";
+				pass.style.border = "2px solid red";
+			}
+		}		 	
+		
+		function auth(login, password) {
+			let inpLog = log.value;
+			let inpPass = pass.value;
+			console.log(inpLog+" "+inpPass)
+			let result = false;
+			for (let i = 0; i < users.length; i++) {
+				if (inpLog == users[i]["login"] && inpPass == users[i]["password"])
+					result = true;
+				} 	
+			console.log(result);
+			return result;
+		}		 
+	</script>
+</body>
+</html>
